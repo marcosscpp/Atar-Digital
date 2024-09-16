@@ -1,0 +1,27 @@
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url("#{$font-path}/#{$file}.ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin flex-center(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
