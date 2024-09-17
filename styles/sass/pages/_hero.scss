@@ -1,0 +1,66 @@
+.hero {
+  background-color: $blue-800;
+  display: flex;
+  line-height: 1.3;
+  min-height: 100vh;
+  text: {
+    align: center;
+    wrap: balance;
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 1.25rem;
+    width: 55%;
+
+    @include respond-to("xl") {
+      width: 75%;
+    }
+
+    @include respond-to("md") {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    height: auto;
+    margin: 4rem auto 2.375rem auto;
+    width: 13.75rem;
+
+    @include respond-to("md") {
+      margin-top: 2rem;
+      width: 10rem;
+    }
+  }
+
+  &__headline {
+    font: {
+      size: 1.375rem;
+      weight: 700;
+    }
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  &__subheadline {
+    color: $gray-300;
+    font: {
+      size: 1rem;
+      weight: 400;
+    }
+  }
+
+  &__video {
+    margin: 1.5rem auto;
+
+    .video {
+      border-radius: 40px !important;
+    }
+  }
+
+  .cta {
+    background: $white;
+    color: $blue-800;
+    font-size: 1.125rem;
+  }
+}

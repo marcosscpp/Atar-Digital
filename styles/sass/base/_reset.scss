@@ -22,7 +22,10 @@ svg {
 
 input,
 button,
-select {
+select,
+a,
+strong {
+  color: inherit;
   font: inherit;
 }
 
@@ -39,4 +42,13 @@ h6 {
 ul {
   list-style: none;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+strong {
+  font-weight: 700;
 }
